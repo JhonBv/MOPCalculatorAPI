@@ -43,9 +43,7 @@ namespace MOP.Calculator.API.Controllers
             string[] pluginPaths = new string[]
             {
                     // Paths to plugins to load.
-                    //@"HelloPlugin\bin\Debug\net5.0\HelloPlugin.dll",
                     @"Plugins\CSharpCalculatorPlugin\bin\Debug\net5.0\CSharpCalculatorPlugin.dll"
-                //@"MOP.PythonCalculator\bin\Debug\net5.0\PythonCalculator.dll"
             };
 
             var result = _calculator.ExecuteCalculator(pluginPaths[0], model);

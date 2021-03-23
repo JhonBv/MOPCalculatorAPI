@@ -55,4 +55,12 @@ In addition to the standard Microsoft Net 5.0 libraries, The MOP Calculator API 
 * NLog 4.7.8
 * MediatR.Extensions.Microsoft.DependencyInjection at Service layer
 
+# Known issues
+
+In the Home Controller (see image below), the path to find available plugins is hardcoded. The aim is to read it from a configuration file rather than having it hardcoded. There is an entry in the appsettings.json and a Configuration class ready to be used.
+![Hardcoded path in controller](Readme/Screenshot3.png)
+
+The same happens in the CalculatorService class, where the name of the Plugin to be loaded is hardcoded (see image below). Again, this should be obtained from a configuration file or pulled from a plugin store (db, etc)
+![Hardcoded plugin in CalculatorService](Readme/Screenshot4.png)
+
 For issues please contact the [Developer](jhon.barreiro@gmail.com).
