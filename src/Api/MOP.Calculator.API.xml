@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MOP.Calculator.API</name>
+    </assembly>
+    <members>
+        <member name="T:MOP.Calculator.API.Configuration.PluginConfigurationWrapper">
+            <summary>
+            Root Plugin Store configuration. The value can be any URL (local path, Web URI, etc)
+            </summary>
+        </member>
+        <member name="M:MOP.Calculator.API.Configuration.PluginConfigurationWrapper.#ctor(Microsoft.Extensions.Options.IOptions{MOP.Calculator.API.Configuration.PluginStoreConfiguration})">
+            <summary>
+            Configuration class for the Calculator PluginStore
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:MOP.Calculator.API.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MOP.Calculator.API.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{MOP.Calculator.API.Controllers.HomeController},MOP.Calculator.API.Services.ICalculatorService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="calculator"></param>
+        </member>
+        <member name="M:MOP.Calculator.API.Controllers.HomeController.CalculatorResult(MOP.Calculator.Models.CalculatorInputModel)">
+            <summary>
+            Invokes Calculator service and returns the result of the operation
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MOP.Calculator.API.Services.CalculatorService">
+            <summary>
+            Provides Calculator function access to Calculator plugins
+            </summary>
+        </member>
+        <member name="M:MOP.Calculator.API.Services.CalculatorService.#ctor(MOP.Calculator.API.Services.IPluginLoaderService,MOP.PluginContracts.ILoggerManager,MOP.Calculator.API.Configuration.IPluginConfigurationWrapper)">
+            <summary>
+            Initialize Calculator Service
+            </summary>
+            <param name="pluginLoader"></param>
+            <param name="logger"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:MOP.Calculator.API.Services.CalculatorService.ExecuteCalculator(System.String,MOP.Calculator.Models.CalculatorInputModel)">
+            <summary>
+            Excecute the Calculator Plugin
+            </summary>
+            <param name="path">Specifies Plugin location</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MOP.Calculator.API.Services.CalculatorService.LoadCalculator(System.Reflection.Assembly,MOP.Calculator.Models.CalculatorInputModel)">
+            <summary>
+            Loads the registered Calculator Types from passsed Assembly
+            </summary>
+            <param name="assembly"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MOP.Calculator.API.Services.ICalculatorService">
+            <summary>
+            Calculator Service contract
+            </summary>
+        </member>
+        <member name="T:MOP.Calculator.Services.LoggerManagerService">
+            <summary>
+            Log calculator events
+            </summary>
+        </member>
+        <member name="M:MOP.Calculator.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:MOP.Calculator.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

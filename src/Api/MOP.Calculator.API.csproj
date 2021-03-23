@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\jhonbarreiro\source\repos\MOP.Calculator\src\Api\MOP.Calculator.API.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IronPython" Version="2.7.11" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="NLog" Version="4.7.8" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\MOP.Calculator.Plugins\MOP.PluginContracts.csproj" />
+    <ProjectReference Include="..\Core\MOP.PluginManager\MOP.PluginManager.csproj" />
+  </ItemGroup>
+
+
+</Project>
