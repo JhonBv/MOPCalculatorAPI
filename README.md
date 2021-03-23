@@ -20,6 +20,11 @@ When performing a calculation, a typical response will contain the result of the
 
 The architecture closely follows a Plug-in architecture. The main components of the whole app are:
 
+### 1. API. TRhe broker between any client application and the backend. Clients can consume the calculator backend via the Endpoints provided in the API.
+### 2. Core. Where the Core values of the whole app live. In this area, the IPlugin, ICalculator and ICalculatorInputModel interfaces dictate the basics of how the backend should implement and consume the Plugins.
+### 3. Domain. Not implemented but it forms the basis for enabling CQRS (Command/Query Resource Seggregation). It will be useful for scaling and for improving system performance
+### 4. Plugins. This is where Plugins are configured and deployed.
+### 5. Tests. Unit testing of Calculator components.
 
 ## Testing the MOP Calculator API
 
