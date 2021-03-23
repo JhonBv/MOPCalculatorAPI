@@ -57,7 +57,8 @@ In addition to the standard Microsoft Net 5.0 libraries, The MOP Calculator API 
 
 # Known issues
 
-In the Home Controller (see image below), the path to find available plugins is hardcoded. The aim is to read it from a configuration file rather than having it hardcoded. There is an entry in the appsettings.json and a Configuration class ready to be used.
+In the Home Controller (see image below), the path to find available plugins is hardcoded. The aim is to read it from a configuration file rather than having it hardcoded.
+There is an entry in the appsettings.json and a Configuration class ready to be used to overcome this scenario.
 ![Hardcoded path in controller](Readme/Screenshot3.png)
 
 The same happens in the CalculatorService class, where the name of the Plugin to be loaded is hardcoded (see image below). Again, this should be obtained from a configuration file or pulled from a plugin store (db, etc)
