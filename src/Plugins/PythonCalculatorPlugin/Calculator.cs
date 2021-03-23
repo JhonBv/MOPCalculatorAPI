@@ -34,7 +34,7 @@ namespace PythonCalculatorPlugin
                 int i1 = operation;
                 char op = (char)(i1 + '0');
                 var engine = Python.CreateEngine();
-                dynamic py = engine.ExecuteFile(@"Plugins\PythonCalculatorPlugin\bin\Debug\net5.0\PythonCalculatorPlugin.dll");
+                dynamic py = engine.ExecuteFile(@"Plugins\PythonCalculatorPlugin\MOP.Calculator.Python.py");
                 //Instantiate the Python Calculator
                 dynamic calc = py.Calculator(op, fnumber, snumber);
                 //Perform calculation (passing params)
