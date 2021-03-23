@@ -24,10 +24,10 @@ The architecture closely follows a Plug-in architecture. The main components of 
 ## Testing the MOP Calculator API
 
 Simply run the MOP.Calculator.API. fro. Visual Studio. A browser will open and the following UI will be displayed:
-![Home page of Calculator API UI](Readme/Screenshot 2021-03-22 at 23.31.14.png)
+![Home page of Calculator API UI](Readme/Screenshot1.png)
 
 Follow the steps as indicated in the Front end. Calculation results are displayed as Web responses:
-![Response from API UI](Readme/Screenshot 2021-03-22 at 23.32.02.png)
+![Response from API UI](Readme/Screenshot2.png)
 
 ##Postman support
 From Postman, use the following criteria:
