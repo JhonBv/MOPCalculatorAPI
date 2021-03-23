@@ -11,6 +11,5 @@ namespace MOP.Calculator.API.Services
     public interface ICalculatorService
     {
         double ExecuteCalculator(string path, CalculatorInputModel input);
-        double LoadCalculator(Assembly assembly, CalculatorInputModel input);
     }
 }

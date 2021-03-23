@@ -59,13 +59,14 @@ namespace MOP.Calculator.API.Services
         /// <param name="assembly"></param>
         /// <param name="input"></param>
         /// <returns></returns>
-        public double LoadCalculator(Assembly assembly, CalculatorInputModel input)
+        private double LoadCalculator(Assembly assembly, CalculatorInputModel input)
         {
             Type type = assembly.GetType("CSharpCalculatorPlugin.Calculator");
             Type loadedType = type;
             if (loadedType != null)
             {
                 dynamic calcInstance = Activator.CreateInstance(loadedType);
+                //Load the calculator plugin, pass the required parameters and return the result
                 var result = calcInstance.Calculate(input.Operation, input.FirstNumber, input.SecondNumber);
                 _logger.LogInfo("Loging calculation result for operation "+ input.Operation.ToString()+ " " +result);
                 return result;

@@ -46,6 +46,9 @@ Lastly, pass the following JSon content (raw body):
     "SecondNumber":10.0
 }
 ```
+The image below demonstrates a postman test
+![Postman test](Readme/Screenshot5.png)
+
 
 ## Libraries
 
